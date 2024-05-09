@@ -1,0 +1,8 @@
+@import 'global/reset.css';
+
+@import 'global/variables.css';
+@import 'global/global-styles.css';
+
+@import-glob 'blocks/*.css';
+@import-glob 'compositions/*.css';
+@import-glob 'utilities/*.css';
