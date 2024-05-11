@@ -5,8 +5,12 @@ module.exports = {
         grid: true,
       },
       stage: 3,
+      browsers: 'last 5 versions', // Add browser support configuration here
     }),
     require('postcss-import-ext-glob'),
-    require('postcss-import')
+    require('postcss-import')({
+      path: ['assets/css/src'], // Specify the directory containing your CSS files
+      to: 'assets/css/dist' // Specify the output directory for processed CSS
+    }),
   ],
 };
