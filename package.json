@@ -1,31 +1,25 @@
 {
- "name": "greenshift-framework-boilerplate",
- "version": "1.0.0",
- "description": "Implement a GreenShift framework boilerplate based on the CUBE CSS methodology and use PostCSS to enhance your styling.",
- 
-"scripts": {
-  "lint:css": "npx stylelint 'assets/css/src/**/*.css'",
-  "clean:css": "rm -rf assets/css/dist/blocks assets/css/dist/compositions assets/css/dist/global assets/css/dist/utilities && mkdir -p assets/css/dist/blocks assets/css/dist/compositions assets/css/dist/global assets/css/dist/utilities",
-  "process:css": "npx postcss assets/css/src/**/*.css --base assets/css/src --dir assets/css/dist --ext .css",
-  "prefix:css": "postcss assets/css/dist/**/*.css --use postcss-preset-env -d assets/css/dist --not assets/css/dist/global.css",
-  "compress:css": "npx cleancss assets/css/dist/**/*.css -o assets/css/dist/**/*.min.css && npx cssnano assets/css/dist/**/*.min.css -o assets/css/dist/**/*.min.css",
-  "build:css": "npm-run-all lint:css clean:css process:css prefix:css compress:css"
-},
-
+  "name": "greenshift-framework-boilerplate",
+  "version": "0.1.3",
+  "description": "Implement a GreenShift framework boilerplate based on the CUBE CSS methodology and use PostCSS to enhance your styling.",
+  "scripts": {
+    "lint:css": "npx stylelint 'assets/css/src/**/*.css'",
+    "clean:css": "rm -rf assets/css/dist/blocks assets/css/dist/compositions assets/css/dist/global assets/css/dist/utilities && mkdir -p assets/css/dist/blocks assets/css/dist/compositions assets/css/dist/global assets/css/dist/utilities",
+    "process:css": "npx postcss assets/css/src/**/*.css --base assets/css/src --dir assets/css/dist --ext .css",
+    "prefix:css": "postcss assets/css/dist/**/*.css --use postcss-preset-env -d assets/css/dist --not assets/css/dist/global.css",
+    "compress:css": "npx cleancss assets/css/dist/**/*.css -o assets/css/dist/**/*.min.css && npx cssnano assets/css/dist/**/*.min.css -o assets/css/dist/**/*.min.css",
+    "build:css": "npm-run-all lint:css clean:css process:css prefix:css compress:css"
+  },
   "keywords": [],
-  
   "author": "Brandon Meyer brandon@indigetal.com",
   "license": "ISC",
-  
   "dependencies": {
     "postcss": "^8.4.31",
     "postcss-import-ext-glob": "^2.1.1",
     "postcss-import": "^15.1.0",
     "postcss-preset-env": "^7.0.0",
-    "token-utility": "^1.0.0",
     "postcss-js": "^4.0.1"
-  }
-  
+  },
   "devDependencies": {
     "postcss-cli": "^10.1.0",
     "concurrently": "^8.2.2",
